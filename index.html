@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="quote-container">
+          <h1>"The Earth is what we all have in common."</h1>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="search-wrapper">
+          <input type="text" placeholder="Enter city name" class="city-input" />
+          <button class="search-btn">Search</button>
+        </div>
+
+        <section class="home-view">
+          <div class="earth-img">
+            <img src="assets/images/home.png" alt="home-illustration" />
+          </div>
+        </section>
+
+        <section class="dashboard-view hidden">
+          <div class="weather-main">
+            <div class="weather-left">
+              <h2 id="city-name">City Name</h2>
+              <p id="description">Weather Description</p>
+            </div>
+            <div class="weather-center">
+              <img
+                id="weather-icon"
+                src="assets/weather-icon.webp"
+                alt="Icon"
+              />
+            </div>
+            <div class="weather-right">
+              <h1 id="temperature">--</h1>
+            </div>
+          </div>
+
+          <div class="weather-details">
+            <div class="detail-card">
+              <h3>Humidity</h3>
+              <p id="humidity">--%</p>
+            </div>
+            <div class="detail-card">
+              <h3>Wind</h3>
+              <p id="wind">-- km/h</p>
+            </div>
+            <div class="detail-card">
+              <h3>Pressure</h3>
+              <p id="pressure">-- hPa</p>
+            </div>
+            <div class="detail-card">
+              <h3>Feels Like</h3>
+              <p id="feels-like">--°C</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="error-view hidden">
+          <div class="error-card">
+            <img src="assets/error_citynotfound.png" alt="Not Found" />
+            <h2>Oops! City Not Found</h2>
+            <p>Please enter a valid city or recheck the spelling.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

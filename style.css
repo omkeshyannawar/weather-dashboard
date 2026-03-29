@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: url("assets/images/asthetic-bgpic.jpg") no-repeat center
+    center/cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ?---  Sidebar Styling --- */
+.sidebar {
+  background: rgba(47, 236, 213, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+}
+
+.quote-container h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/*? ---  Main Content Area --- */
+.main-content {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto; /* Allows scrolling if content is long */
+}
+
+/*? MASTER SEARCH BAR */
+.search-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  gap: 12px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-wrapper button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-wrapper button:hover {
+  background: #334155;
+}
+
+/*? ---  Home View --- */
+.home-view {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.earth-img img {
+  max-width: 350px;
+  width: 90%;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/*? ---  Dashboard View  --- */
+.dashboard-view {
+  width: 100%;
+  padding: 140px 40px 40px; /* Space for search bar */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px 40px;
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  margin-top: -40px;
+}
+
+.weather-left {
+  flex: 1;
+}
+
+.weather-left h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+.weather-left p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.weather-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.weather-center img {
+  width: 160px; /* Locked size */
+  height: 160px;
+  object-fit: contain;
+}
+
+.weather-right {
+  flex: 1;
+  text-align: right;
+}
+
+.weather-right h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+}
+
+.detail-card h3 {
+  font-size: 0.9rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.detail-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+/*? --- Utility & Error --- */
+.hidden {
+  display: none !important;
+}
+
+.error-view {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.error-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.error-card img {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+/*? ---  Responsive Media Queries --- */
+@media (max-width: 1024px) {
+  .app {
+    grid-template-columns: 30% 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .search-wrapper {
+    top: 20px;
+    flex-direction: column;
+    width: 85%;
+  }
+  .search-wrapper input,
+  .search-wrapper button {
+    width: 100%;
+  }
+
+  .dashboard-view {
+    padding: 160px 20px 20px;
+  }
+
+  .weather-main {
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    margin-top: 5px;
+  }
+
+  .weather-right {
+    text-align: center;
+  }
+  .weather-right h1 {
+    font-size: 3.5rem;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+}
