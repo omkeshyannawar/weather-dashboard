@@ -1,5 +1,4 @@
-// API KEY --> 4f431a6c46b142ccd52cc18699b137af
-// API URL--> https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+
 
 const inputBox = document.querySelector(`.city-input`);
 const searchbtn = document.querySelector(`.search-btn`);
