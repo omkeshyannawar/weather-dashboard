@@ -19,5 +19,5 @@ A modern, responsive weather application built with Vanilla JavaScript, HTML5, a
 ### Weather Dashboard
 ![Dashboard View](/assets/Screenshots/weather-dashboard.png)
 
-### Mobile Responsive View
+### Error View
 ![Mobile View](/assets/Screenshots/Error-view.png)
