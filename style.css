@@ -20,7 +20,7 @@ body {
   width: 100vw;
 }
 
-/* ?---  Sidebar Styling --- */
+/* ?---  Sidebar-----*/
 .sidebar {
   background: rgba(47, 236, 213, 0.2);
   border-radius: 20px;
@@ -47,7 +47,7 @@ body {
 .main-content {
   position: relative;
   height: 100vh;
-  overflow-y: auto; /* Allows scrolling if content is long */
+  overflow-y: auto;
 }
 
 /*? MASTER SEARCH BAR */
@@ -194,7 +194,7 @@ body {
   color: #0f172a;
 }
 
-/*? --- Utility & Error --- */
+/*? --- Utility class--- */
 .hidden {
   display: none !important;
 }
